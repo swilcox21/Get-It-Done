@@ -1,0 +1,49 @@
+.activeTodo {
+    border: none;
+    font-size: 1.1rem;
+    padding-top: 3px;
+}
+
+.addNew {
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+button {
+    border-radius: 5px;
+    background-color: #343a40;
+    color: #007bff;
+}
+
+.deleteX {
+    font-size: 1.1rem;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+    text-decoration-color: grey;
+}
+
+.done2 {
+    color: grey;
+}
+
+.sideBar {
+    position: absolute;
+    z-index: 2;
+    // background-color: rgb(226, 226, 226);
+    // border-right: 1px solid black;
+}
+
+.toggleButton {
+    position: left;
+}
+
+.toggleOffButton {
+    float: right; 
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}

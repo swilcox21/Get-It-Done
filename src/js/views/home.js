@@ -1,15 +1,24 @@
-import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Clock from "../component/clock";
+import { Context } from "../store/appContext";
 
-export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
-	</div>
-);
+export class Home extends React.Component {
+	constructor() {
+		super();
+		this.state = {};
+	}
+	render() {
+		return (
+			<div className="container text-center">
+				<div className="text-center mt-3 mb-5">Hello Sam</div>
+				<div className="container text-center mt-5 clock">
+					{new Date().toLocaleString("en-us", { weekday: "long" })}
+					<Clock />
+				</div>
+			</div>
+		);
+	}
+}
+// export default Home;
