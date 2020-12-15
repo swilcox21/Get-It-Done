@@ -123,11 +123,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			handleChangeHobby: (e, i) => {
 				let tempStore = getStore();
-				tempStore.hobby.map((t, ind) => {
+				const newTodos = tempStore.hobby.map((t, ind) => {
 					if (ind === i) {
-						setStore((t.name = e.target.value));
+						t.name = e.target.value;
 					}
+					return t;
 				});
+				setStore({ hobby: newTodos });
 			},
 
 			hobbySetComplete: (hobby, i) => {

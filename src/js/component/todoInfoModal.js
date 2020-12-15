@@ -9,21 +9,25 @@ export const TodoInfoModal = props => {
 	});
 	const { actions, store } = useContext(Context);
 	const handleDoIt = () => {
-		actions.deleteContact(props.id);
+		actions.deleteContact(props.index);
 		props.onClose();
 	};
 
 	return (
-		<div className="modal" tabIndex="-1" role="dialog" style={{ display: props.show ? "inline-block" : "none" }}>
+		<div
+			className="modal"
+			tabIndex="-1"
+			role="dialog"
+			style={{ display: props.show !== false ? "inline-block" : "none" }}>
 			<div className="modal-dialog" role="document">
 				<div className="modal-content">
 					{store.hobby &&
-						store.hobby.map((todo, index) => (
+						store.hobby.filter((todo, index) => index == props.show).map((todo, index) => (
 							<>
 								<div className="modal-header">
 									<h3 className="modal-title">
 										Todo number: &nbsp;
-										{index + 1}
+										{props.show + 1}
 									</h3>
 									{props.onClose ? (
 										<button
