@@ -10,7 +10,9 @@ export const Navbar1 = () => {
 				</span>
 			</Link>
 			<Link to="/work">
-				<span className="">Work</span>
+				<span className="">
+					<i className="far fa-calendar-alt" />
+				</span>
 			</Link>
 			<Link to="/hobby">
 				<span className="">Hobby</span>

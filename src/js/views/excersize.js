@@ -27,7 +27,7 @@ export class Excersize extends React.Component {
 			<Context.Consumer>
 				{({ actions, store }) => (
 					<div className="container text-center">
-						<div className="text-center mt-3 mb-5">EXCERSIZE</div>
+						<div className="text-center mt-3 mb-5">New Task</div>
 						<textarea
 							className="pt-4 pl-2 col-md-6 text-center"
 							placeholder="Stop being lazy and JUST DO IT!"

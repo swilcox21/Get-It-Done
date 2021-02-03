@@ -81,7 +81,7 @@ export class Hobby extends React.Component {
 								show={this.state.showTodoIndex}
 								onClose={() => this.setState({ showTodoIndex: false })}
 							/>
-							<div className="text-center mt-3 mb-5">HOBBY</div>
+							<div className="text-center mt-3 mb-5">New Task</div>
 							<textarea
 								className="pt-4 pl-2 col-md-6 text-center"
 								placeholder="Stop being lazy and JUST DO IT!"
